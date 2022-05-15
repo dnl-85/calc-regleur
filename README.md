@@ -1,5 +1,5 @@
-# calc-regleur
-application d'aide aux réglages pour les régleurs de Rollomatic 620 &amp; +, Reinecker RS700 et SF40
+# calculator.exe
+### application d'aide aux réglages pour les régleurs de Rollomatic 620 &amp; +, Reinecker RS700 et SF40
 -----
 Salut à tous,  
 L'application ici présente permet de donner une aide lors de réglages sur machines Rollomatic 620 & versions supérieurs, Reinecker RS700 et Reinecker SF40. Plus précisement dans le domaine de la fabrication d'outils coupants rotatifs.  
