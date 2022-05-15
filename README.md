@@ -9,7 +9,7 @@ Cette application a été développée et compilée sous QuickBasic64 (une versi
 
 Pour ceux que le code intéresse, il est disponible dans le fichier 'calculator.bas'. Une application comme Notepad suffit pour le lire.  
 
-L'application est sous license MIT, pour en savoir plus, jetez un oeil au fichier 'LICENCE'.  
+L'application est sous license MIT, pour en savoir plus, jetez un oeil au fichier 'LICENSE'. L'application ne peut être distribuée qu'avec la présence de ce fichier de license contenu dans le zip de distribution, ou tout autres méthodes.
 
 Pour le reste, bonne utilisation à tous, et si jamais vous avez des idées d'améliorations qui peuvent être intégrées à cette application, n'hésitez pas à m'en faire part... ;)  
 
