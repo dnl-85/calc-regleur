@@ -11,6 +11,8 @@ Pour ceux que le code intéresse, il est disponible dans le fichier 'calculator.
 
 L'application est sous license MIT, pour en savoir plus, jetez un oeil au fichier 'LICENSE'. L'application ne peut être distribuée qu'avec la présence de ce fichier de license contenu dans le zip de distribution, ou tout autres méthodes.
 
+Le téléchargement de l'application se fait simplement par un clic droit sur le nom du fichier 'calculator.exe', suivi de l'option 'enregistrer le lien sous...". Ainsi vous pourrez la récuperer sur votre pc et vous en servir de suite, sans autre forme d'installation ; l'application étant libre de dépendances.  
+
 Pour le reste, bonne utilisation à tous, et si jamais vous avez des idées d'améliorations qui peuvent être intégrées à cette application, n'hésitez pas à m'en faire part... ;)  
 
 Daniel,  
