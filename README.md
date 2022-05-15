@@ -8,5 +8,5 @@ Cette application a été développée et compilée sous QuickBasic64 (une versi
 
 Pour le reste, bonne utilisation à tous, et si jamais vous avez des idées d'améliorations qui peuvent être intégrées à cette application, n'hésitez pas à m'en faire part... ;)  
 
-Daniel,
+Daniel,  
 Mai 2022.
