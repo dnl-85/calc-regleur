@@ -18,8 +18,7 @@ Print "  i. au sujet de cette application...                     "
 Print "                                                          "
 Print "  0. quitter l'application.                               "
 Print "----------------------------------------------------------"
-Input "  choix                                              >>  ", choix$
-Print ""
+Input "  selection >> ", choix$
 
 If choix$ = "1" Then: GoTo Hauteur_Pointe
 If choix$ = "2" Then: GoTo Compensation_Listel_Simple
@@ -37,13 +36,19 @@ Color 4, 15
 Cls
 
 Print "- CALCULER UNE HAUTEUR DE POINTE -"
-Print ""
-Input "Diametre de la piece : ", diam
-Input "Angle de pointe      : ", angle_pointe
-Print ""
+Print "Diametre de la piece : "
+Print "Angle de pointe      : "
+
+Locate 2, 30
+Input "", diam
+Locate 3, 30
+Input "", angle_pointe
+
 demi_diam = diam / 2
 demi_pointe = angle_pointe / 2
 hauteur_pointe! = demi_diam / Tan((demi_pointe * (3.1415 * 2)) / 360)
+
+Locate 10, 1
 Print "Le rayon fait                            : "; demi_diam; "mm."
 Print "Le demi de l'angle de pointe fait        : "; demi_pointe; "dgr."
 Print "La hauteur de pointe de votre outil fait : "; hauteur_pointe; "mm."
@@ -59,16 +64,22 @@ Color 4, 15
 Cls
 
 Print "- CALCULER UNE COMPENSATION DE LISTEL SIMPLE -"
-Print ""
-Input "Diametre de la piece : ", diam
-Input "Listel mesur‚        : ", mes_listel
-Input "Listel nominal       : ", nom_listel
-Print ""
+Print "Diametre de la piece : "
+Print "Listel mesure        : "
+Print "Listel nominal       : "
+
+Locate 2, 30
+Input "", diam
+Locate 3, 30
+Input "", mes_listel
+Locate 4, 30
+Input "", nom_listel
 
 val_dgr! = (diam * 3.1415) / 360
 difference = mes_listel - nom_listel
 decalage! = difference / val_dgr
 
+Locate 10, 1
 Print "Un degr‚ vaut      : "; val_dgr; "mm"
 Print "Votre compensation : "; decalage; "dgr"
 Print ""
@@ -83,13 +94,22 @@ Color 4, 15
 Cls
 
 Print "- CALCULER UNE COMPENSATION DE DOUBLE LISTELS -"
-Print ""
-Input "Diametre de la piece : ", diam
-Input "Listel Avant         : ", listel_avant
-Input "Listel Arriere       : ", listel_arriere
-Input "Listel nominal       : ", nom_listel
-Input "Decalage des passes  : ", decal_passe
-Print ""
+Print "Diametre de la piece : "
+Print "Listel Avant         : "
+Print "Listel Arriere       : "
+Print "Listel nominal       : "
+Print "Decalage des passes  : "
+
+Locate 2, 30
+Input "", diam
+Locate 3, 30
+Input "", listel_avant
+Locate 4, 30
+Input "", listel_arriere
+Locate 5, 30
+Input "", nom_listel
+Locate 6, 30
+Input "", decal_passe
 
 val_dgr! = (diam * 3.1415) / 360
 difference_avant = listel_avant - nom_listel
@@ -100,6 +120,7 @@ difference_arriere = listel_arriere - nom_listel
 decalage_arriere = difference_arriere / val_dgr
 decal_passe! = decal_passe - decalage_arriere
 
+Locate 10, 1
 Print "Un degr‚ vaut               : "; val_dgr; "mm"
 Print "Compensation listel avant   : "; decalage_avant; "dgr"
 Print "Decalage entre les 2 passes : "; decal_passe; "dgr"
@@ -115,15 +136,21 @@ Color 4, 15
 Cls
 
 Print "- CALCULER UNE LONGUEUR D'ANGLE DE PASSAGE (ARETE DE COUPE) -"
-Print ""
-Input "Diametre inferieur        : ", diam_inf
-Input "Diametre superieur        : ", diam_sup
-Input "Angle de passage au rayon : ", angle_pass
-Print ""
+Print "Diametre inferieur        : "
+Print "Diametre superieur        : "
+Print "Angle de passage au rayon : "
+
+Locate 2, 30
+Input "", diam_inf
+Locate 3, 30
+Input "", diam_sup
+Locate 4, 30
+Input "", angle_pass
 
 diff_rayon = (diam_sup - diam_inf) / 2
 long_arete! = diff_rayon / Sin((angle_pass * (3.1415 * 2)) / 360)
 
+Locate 10, 1
 Print "La longueur de l'arete de coupe de l'angle de passage vaut : "; long_arete; "mm"
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
@@ -137,11 +164,16 @@ Color 4, 15
 Cls
 
 Print "- CALCULER UNE LONGUEUR D'ANGLE DE PASSAGE (AXIAL) -"
-Print ""
-Input "Diametre inferieur        : ", diam_inf
-Input "Diametre superieur        : ", diam_sup
-Input "Angle de passage au rayon : ", angle_pass
-Print ""
+Print "Diametre inferieur        : "
+Print "Diametre superieur        : "
+Print "Angle de passage au rayon : "
+
+Locate 2, 30
+Input "", diam_inf
+Locate 3, 30
+Input "", diam_sup
+Locate 4, 30
+Input "", angle_pass
 
 diff_rayon = (diam_sup - diam_inf) / 2
 long_axial! = diff_rayon / Tan((angle_pass * (3.1415 * 2)) / 360)
@@ -186,6 +218,6 @@ Screen 12
 _Title "... fin ..."
 Cls
 
-Locate 8, 15
+Locate 10, 20
 Print "Fin de l'application, … la prochaine !.."
 End
