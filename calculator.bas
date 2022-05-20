@@ -6,7 +6,7 @@ Cls
 
 Print "----------------------------------------------------------"
 Print "  CALCULATEUR D'AIDE AUX REGLAGES !                       "
-Print "  Mai 2022  -  sous Licence MIT                           "
+Print "  rev. 20 Mai 2022  -  sous License MIT                   "
 Print "----------------------------------------------------------"
 Print "  1. calculer une hauteur de pointe.                      "
 Print "  2. calculer une compensation de listel simple.          "
@@ -28,7 +28,9 @@ If choix$ = "5" Then: GoTo Longueur_Passage_Axial
 If choix$ = "i" Then: GoTo Info_Appli
 If choix$ = "0" Then: GoTo Fin
 
-
+Rem ###############################################################################################
+Rem ### calcul de la hauteur de pointe.
+Rem ###############################################################################################
 Hauteur_Pointe:
 Screen 12
 _Title "option 1 : calculer une hauteur de pointe..."
@@ -49,14 +51,16 @@ demi_pointe = angle_pointe / 2
 hauteur_pointe! = demi_diam / Tan((demi_pointe * (3.1415 * 2)) / 360)
 
 Locate 10, 1
-Print "Le rayon fait                            : "; demi_diam; "mm."
-Print "Le demi de l'angle de pointe fait        : "; demi_pointe; "dgr."
-Print "La hauteur de pointe de votre outil fait : "; hauteur_pointe; "mm."
+Print Using "Le rayon fait                            : #######.### mm"; demi_diam
+Print Using "Le demi de l'angle de pointe fait        : #######.### dgr"; demi_pointe
+Print Using "La hauteur de pointe de votre outil fait : #######.### mm"; hauteur_pointe
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### calcul de la compensation de listels simples.
+Rem ###############################################################################################
 Compensation_Listel_Simple:
 Screen 12
 _Title "option 2 : calculer une compensation de listel simple..."
@@ -80,13 +84,15 @@ difference = mes_listel - nom_listel
 decalage! = difference / val_dgr
 
 Locate 10, 1
-Print "Un degr‚ vaut      : "; val_dgr; "mm"
-Print "Votre compensation : "; decalage; "dgr"
+Print Using "Un degr‚ vaut      : #######.### mm"; val_dgr
+Print Using "Votre compensation : #######.### dgr"; decalage
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### calcul de la compensation de listels double.
+Rem ###############################################################################################
 Compensation_Listel_Double:
 Screen 12
 _Title "option 3 : calculer une compensation de double listels..."
@@ -121,14 +127,16 @@ decalage_arriere = difference_arriere / val_dgr
 decal_passe! = decal_passe - decalage_arriere
 
 Locate 10, 1
-Print "Un degr‚ vaut               : "; val_dgr; "mm"
-Print "Compensation listel avant   : "; decalage_avant; "dgr"
-Print "Decalage entre les 2 passes : "; decal_passe; "dgr"
+Print Using "Un degr‚ vaut               : #######.### mm"; val_dgr
+Print Using "Compensation listel avant   : #######.### dgr"; decalage_avant
+Print Using "Decalage entre les 2 passes : #######.### dgr"; decal_passe
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### calcul de la longueur hypothenuse pour un angle de passage.
+Rem ###############################################################################################
 Longueur_Passage_Hypothenuse:
 Screen 12
 _Title "option 4 : calculer une longueur d'angle de passage (arete de coupe)"
@@ -151,12 +159,14 @@ diff_rayon = (diam_sup - diam_inf) / 2
 long_arete! = diff_rayon / Sin((angle_pass * (3.1415 * 2)) / 360)
 
 Locate 10, 1
-Print "La longueur de l'arete de coupe de l'angle de passage vaut : "; long_arete; "mm"
+Print Using "La longueur de l'arete de coupe de l'angle de passage vaut : #######.### mm"; long_arete
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### calcul de la longueur axial pour un angle de passage.
+Rem ###############################################################################################
 Longueur_Passage_Axial:
 Screen 12
 _Title "option 5 : calculer une longueur d'angle de passage (longueur axial)"
@@ -178,12 +188,15 @@ Input "", angle_pass
 diff_rayon = (diam_sup - diam_inf) / 2
 long_axial! = diff_rayon / Tan((angle_pass * (3.1415 * 2)) / 360)
 
-Print "La longueur axial de l'angle de passage vaut : "; long_axial; "mm"
+Locate 10, 1
+Print Using "La longueur axial de l'angle de passage vaut : #######.### mm"; long_axial
 Print ""
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### infos concernant cette application.
+Rem ###############################################################################################
 Info_Appli:
 Screen 12
 _Title "au sujet de cette application..."
@@ -212,7 +225,9 @@ Print "                                                            "
 Input "Appuyez sur Entree pour revenir ...", suivant
 GoTo Debut
 
-
+Rem ###############################################################################################
+Rem ### fin du programme.
+Rem ###############################################################################################
 Fin:
 Screen 12
 _Title "... fin ..."
